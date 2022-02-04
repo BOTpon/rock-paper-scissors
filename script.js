@@ -1,14 +1,18 @@
 const choices = ["rock", "paper", "scissors"];
-let compInput = computerPlay();
 
-console.log(compInput);
+game();
 
 function game() {
+  console.log("Game 1: ");
+  playRound();
+  console.log("Game 2: ");
   playRound();
 }
 
 function computerPlay() {
-  return choices[Math.floor(Math.random() * choices.length)];
+  let compInput = choices[Math.floor(Math.random() * choices.length)];
+  console.log("Computer chose: " + compInput + "!");
+  return compInput;
 }
 
 function playRound() {
@@ -66,9 +70,3 @@ function validateInput(choice) {
     return false;
   }
 }
-
-// function game() {
-//   playRound();
-//   console.log("Player chose: " + playerChoice() + "!");
-//   console.log("Computer chose: " + computerPlay() + "!");
-// }
